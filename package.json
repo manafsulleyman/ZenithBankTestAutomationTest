@@ -1,0 +1,17 @@
+{
+  "name": "zenithautomationproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "dependencies": {
+    "cypress": "^13.2.0",
+    "cypress-real-events": "^1.10.3",
+    "@testing-library/cypress": "^8.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "Abdul Manaf Sulley",
+  "license": "ISC"
+}
