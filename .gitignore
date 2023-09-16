@@ -1,0 +1,7 @@
+cypress/videos/*
+!/cypress/videos/*.md
+cypress/reports/*
+cypress/screenshots/*
+
+
+node_modules/*
