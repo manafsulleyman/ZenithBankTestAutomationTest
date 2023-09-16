@@ -1,17 +1,17 @@
 import { baseUrl } from "../../fixtures/test-environment";
+import {
+  features,
+  requirements,
+  availableChannels,
+} from "../../fixtures/current-account-test-data";
 
 describe(`Current account validation `, () => {
-  beforeEach(() => {
-    cy.session("visit", () => {
-      cy.visit(baseUrl);
-    });
-  });
-
-  after(() => {
-    cy.clearAllSessionStorage();
+  before(() => {
+    cy.clearAllCookies();
   });
 
   it("should be able to access the current account page", () => {
+    cy.visit(baseUrl);
     cy.get("#continue-button").click();
     cy.findByRole("link", { name: /PERSONAL/i }).realHover("mouse");
     cy.findAllByText("Bank Accounts").should("be.visible");
@@ -21,55 +21,41 @@ describe(`Current account validation `, () => {
     cy.get("a").contains("Current Account").click({ force: true });
   });
 
-  it("should validate the features of the individual ", () => {
+  it("should validate the features of the individual current account", () => {
     cy.findAllByText("FEATURES AND BENEFITS").eq(0).click({ force: true });
     cy.get("#ui-id-2").then((items) => {
-      expect(items[0]).to.include.text("Zero account opening balance");
-      expect(items[0]).to.include.text("Internet Banking");
-      expect(items[0]).to.include.text("Zenith Mobile Banking app");
-      expect(items[0]).to.include.text("*966# Eazybanking");
-      expect(items[0]).to.include.text("MasterCard/Visa/Verve debit card");
-      expect(items[0]).to.include.text("Email/SMS Alertz");
-      expect(items[0]).to.include.text("Cheque book");
+      expect(items[0]).to.include.text(features.featureOne);
+      expect(items[0]).to.include.text(features.featureTwo);
+      expect(items[0]).to.include.text(features.featureThree);
+      expect(items[0]).to.include.text(features.featureFour);
+      expect(items[0]).to.include.text(features.featureFive);
+      expect(items[0]).to.include.text(features.featureSix);
+      expect(items[0]).to.include.text(features.featureSeven);
     });
   });
 
-  it("should validate the requirement of ", () => {
+  it("should validate the requirements of the individual current account", () => {
     cy.findAllByText("REQUIREMENTS").eq(0).click({ force: true });
     cy.get("#ui-id-4").then((items) => {
-      expect(items[0]).to.include.text("Account opening form duly completed");
-      expect(items[0]).to.include.text(
-        "One recent clear passport photograph of signatory"
-      );
-      expect(items[0]).to.include.text(
-        "Identification of signatories (Driver’s License, International Passport, National Identity Card or Voter’s Card)"
-      );
-      expect(items[0]).to.include.text("Residence permit (where applicable)");
-      // expect(items[0]).to.include.text("Two independent and satisfactory references");
-      expect(items[0]).to.include.text(
-        "Public Utility Receipt dated within the last three months (PHCN bill, water rate bill, tenement rate, rent receipt, telephone bill)"
-      );
+      expect(items[0]).to.include.text(requirements.requirementOne);
+      expect(items[0]).to.include.text(requirements.requirementTwo);
+      expect(items[0]).to.include.text(requirements.requirementThree);
+      expect(items[0]).to.include.text(requirements.requirementFour);
+      // expect(items[0]).to.include.text(requirements.requirementFive);
+      expect(items[0]).to.include.text(requirements.requirementSix);
     });
   });
 
-  it("should validate the available channels", () => {
+  it("should validate the available channels of the individual current account", () => {
     cy.findAllByText("AVAILABLE CHANNELS").eq(0).click({ force: true });
     cy.get("#ui-id-6").then((items) => {
-      expect(items[0]).to.include.text("*966# EazyBanking");
-      expect(items[0]).to.include.text("Zenith Internet Banking");
-      expect(items[0]).to.include.text("In-branch at any Zenith Bank branch");
-      expect(items[0]).to.include.text(
-        "ZenithDirect – our 24/7 telephone banking"
-      );
-      expect(items[0]).to.include.text(
-        "Zenith Bank ATM nation-wide – free cash withdrawal"
-      );
-      expect(items[0]).to.include.text(
-        "Zenith Mobile Banking App – 24/7 on your smart phone"
-      );
-      expect(items[0]).to.include.text(
-        "Access your account using your Zenith Bank debit card at participating merchant stores for payment of goods and services in Nigeria and anywhere in the world"
-      );
+      expect(items[0]).to.include.text(availableChannels.channelOne);
+      expect(items[0]).to.include.text(availableChannels.channelTwo);
+      expect(items[0]).to.include.text(availableChannels.channelThree);
+      expect(items[0]).to.include.text(availableChannels.channelFour);
+      expect(items[0]).to.include.text(availableChannels.channelFive);
+      expect(items[0]).to.include.text(availableChannels.channelSix);
+      expect(items[0]).to.include.text(availableChannels.channelSeven);
     });
   });
 });
