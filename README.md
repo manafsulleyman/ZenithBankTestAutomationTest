@@ -1,20 +1,19 @@
-# Installation
+## Getting Started
 
-- `npm install`
+These instructions will get you a copy of the test automation project up and running on your local machine.
 
-# Usage
+### Installation
 
-This test runs actually on your localhost server.  
-Update and run in a separate terminal.  
-Then:
+The first step to running this repo locally is downloading the code by cloning the repository
 
-1. Change the base-url  
-   `/cypress/fixtures/shared/environment`
-2. Clean if needed videos,screenshots or reports // todo: with script
-   `/cypress/screenshots`
-   `/cypress/reports`
-3. Open Cypress  
-   `npm run cypress:open`  
-4. or Run the tests  
-   manually or `npm run cy:run`
+`git clone https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git`
 
+After cloning, do the following:
+
+```
+  Open the cloned project folder in a terminal (cd ZenithBankTestAutomationTest)
+  Run 'npm install' to install all the dependencies
+  To run the test 'npm run cypress:open'
+```
+
+> NB: You need [Nodejs/NPM](https://nodejs.org/en/) on your local machine for this project to work
