@@ -5,12 +5,15 @@ These instructions will get you a copy of the test automation project up and run
 ### Installation
 
 ```
-## clone this repo to a local directory
+## To make a clone of this repo to a local directory, run the command
   git clone https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git
-##cd into the cloned repo (Open the cloned project folder in a terminal)
+
+## cd into the cloned repo (Open the cloned project folder in a terminal)
   cd ZenithBankTestAutomationTest
-## install all dependencies needed to run the test
+
+## Install all dependencies needed to run the test
   npm install
+
 ## To run the test, use the command 
   npm run cypress:open
 ```
