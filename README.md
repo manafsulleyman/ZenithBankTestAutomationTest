@@ -13,7 +13,7 @@ After cloning, do the following:
 ```
   Open the cloned project folder in a terminal (cd ZenithBankTestAutomationTest)
   Run 'npm install' to install all the dependencies
-  To run the test 'npm run cypress:open'
+  To run the test, run the command 'npm run cypress:open'in the terminal
 ```
 
 > NB: You need [Nodejs/NPM](https://nodejs.org/en/) on your local machine for this project to work
