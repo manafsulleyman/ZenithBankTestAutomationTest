@@ -8,7 +8,7 @@ These instructions will get you a copy of the test automation project up and run
 ## To make a clone of this repo to a local directory, run this command in a terminal
   git clone https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git
         Or
-visit the link https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git to download a copy of the project. 
+visit the link ```https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git``` to download a copy of the project. 
 
 
 ## cd into the cloned repo (Open the cloned project folder in a terminal)
