@@ -6,7 +6,10 @@ These instructions will get you a copy of the test automation project up and run
 
 The first step to running this repo locally is downloading the code by cloning the repository
 
-```git clone https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git```
+```
+  git clone https://github.com/manafsulleyman/ZenithBankTestAutomationTest.git
+
+```
 
 After cloning, do the following:
 
